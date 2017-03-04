@@ -1,0 +1,77 @@
+\documentclass{article}
+
+\usepackage[margin=2.5cm,left=2cm,includefoot]{geometry}
+\usepackage{hyperref}
+\usepackage{array}
+\usepackage{enumitem}
+\usepackage{graphicx}
+\usepackage[section]{placeins}
+\usepackage{titlesec}
+
+% Set depth for sections (one more than usual)
+\setcounter{secnumdepth}{4}
+
+% Set paragraphs to be the 4th section depth
+\titleformat{\paragraph}
+{\normalfont\normalsize\bfseries}{\theparagraph}{1em}{}
+\titlespacing*{\paragraph}
+{0pt}{3.25ex plus 1ex minus .2ex}{1.5ex plus .2ex}
+
+% Header and footer
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+
+\rhead{COS301 - \LaTeX}
+\lhead{Team Algol}
+\fancyfoot{}
+\fancyfoot[R]{Page \thepage}
+
+\renewcommand{\headrulewidth}{2pt}
+\renewcommand{\footrulewidth}{1pt}
+%
+
+\begin{document}
+
+	\begin{titlepage}
+		\begin{center}
+
+			\line(1,0){400}\\
+			[6mm]
+			\huge{
+				\bfseries Architectural Requirements Specifications and Design
+			}\\
+			[2mm]
+			\line(1,0){300}\\
+			[15mm]
+			\textsc{\large NavUP}\\
+			[7.5mm]
+			\textsc{\large University of Pretoria - Team Algol}\\
+			[20mm]
+			\large{\textbf{Created By:}}\\
+			[2mm]
+			\large{
+			% Add your own details here 
+				\href{https://github.com/KeatonPennels}{Keaton Pennels - 14373018}\\
+			}\\
+			[5cm]
+
+		\href{https://github.com/Chris19951225/COS-301-Team-Algol}{\textsc{\Large GitHub Repository - Team Algol}\\[2mm]
+		  For more information, please click here}
+		\end{center}
+		\begin{flushright}
+			\textsc{\large 26 February 2017}
+		\end{flushright}
+	\end{titlepage}
+
+	\cleardoublepage
+	\thispagestyle{empty}
+	\tableofcontents
+	\cleardoublepage
+
+	\thispagestyle{empty}
+	\listoffigures
+	\cleardoublepage
+	\setcounter{page}{1}
+
+
+\end{document}
