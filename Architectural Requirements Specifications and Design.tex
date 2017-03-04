@@ -1,0 +1,130 @@
+\documentclass{article}
+
+\usepackage[margin=2.5cm,left=2cm,includefoot]{geometry}
+\usepackage{hyperref}
+\usepackage{array}
+\usepackage{enumitem}
+\usepackage{graphicx}
+\usepackage[section]{placeins}
+\usepackage{titlesec}
+
+% Set depth for sections (one more than usual)
+\setcounter{secnumdepth}{4}
+
+% Set paragraphs to be the 4th section depth
+\titleformat{\paragraph}
+{\normalfont\normalsize\bfseries}{\theparagraph}{1em}{}
+\titlespacing*{\paragraph}
+{0pt}{3.25ex plus 1ex minus .2ex}{1.5ex plus .2ex}
+
+% Header and footer
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+
+\rhead{COS301 - \LaTeX}
+\lhead{Team Algol}
+\fancyfoot{}
+\fancyfoot[R]{Page \thepage}
+
+\renewcommand{\headrulewidth}{2pt}
+\renewcommand{\footrulewidth}{1pt}
+%
+
+\begin{document}
+
+	\begin{titlepage}
+		\begin{center}
+
+			\line(1,0){400}\\
+			[6mm]
+			\huge{
+				\bfseries Architectural Requirements Specifications and Design
+			}\\
+			[2mm]
+			\line(1,0){300}\\
+			[15mm]
+			\textsc{\large NavUP}\\
+			[7.5mm]
+			\textsc{\large University of Pretoria - Team Algol}\\
+			[20mm]
+			\large{\textbf{Created By:}}\\
+			[2mm]
+			\large{
+			% Add your own details here 
+				\href{https://github.com/KeatonPennels}{Keaton Pennels - 14373018}\\
+			}\\
+			[5cm]
+
+		\href{https://github.com/Chris19951225/COS-301-Team-Algol}{\textsc{\Large GitHub Repository - Team Algol}\\[2mm]
+		  For more information, please click here}
+		\end{center}
+		\begin{flushright}
+			\textsc{\large 26 February 2017}
+		\end{flushright}
+	\end{titlepage}
+
+	\cleardoublepage
+	\thispagestyle{empty}
+	\tableofcontents
+	\cleardoublepage
+
+	\thispagestyle{empty}
+	\listoffigures
+	\cleardoublepage
+	\setcounter{page}{1}
+	
+	
+	\section{Introduction}\label{sec:intro}
+		This chapter of the document aims to identify the architectural design specifications which satisfy the identified functional requirements of the NavUP system. Additionally, it will include any terms, abbreviations, acronyms and references used throughout this document.
+	
+		\subsection{Purpose}\label{subsec:purpose}
+			The main purpose of this document is firstly identifying the subsystem architectural design requirements, constraints, integration need  and then addressing these elemts by using architectural patterns and diagrams to model system behaviour and interactions. The choice of appropriate technologies for the implementation of this system that satisfy the various requirements will also be prosposed along with motivations for these propositions 
+				
+		\subsection{Definitions, Acronyms, and Abbreviations}\label{subsec:daa}
+			\begin{table}[h!]
+				\centering
+				\caption{Table of Definitions, Acronyms, and Abbreviations used in this document}
+				\label{tab: Table 1}
+				\begin{tabular}{| m{4cm} | m{12cm} |}
+					\hline
+					\textbf{Term} & \textbf{Definition} \\
+					\hline
+					\hline
+					
+				\end{tabular}
+			\end{table}
+	
+		\subsection{References}\label{subsec:references}
+		List each document referenced in the SRS by title, report number, date, publisher, and where and how to get it
+		
+	\section{Requirements and Constraints}\label{sec:requirements}
+			\subsection{External Interface Requirements}\label{subsec:external}
+				Provide a detailed description for each of the system interfaces, user interfaces, hardware interfaces, software interfaces, and communications interfaces. The description of each interface includes for each input and output, the name, format, valid range, timing and other relevant information.
+
+			\subsection{Performance Requirements}\label{subsec:performance}
+				Describe all performance related capabilities of the product
+			\subsection{Design Constraints}\label{subsec:design constraints}	
+				Describe all constraints that related to the design phase of the product
+			\subsection{Software System Attributes}\label{subsec:attributes}
+
+		\newpage
+
+		\section{Module Design}\label{sec:moduels}	
+			\subsection{Navigation Subsystem}\label{subsec:navigation}
+			\subsection{User Subsystem}\label{subsec:users}
+			\subsection{Notification Subsystem}\label{subsec:notification}
+			\subsection{Points of Interest Subsystem}\label{subsec:points of interest}
+
+		\newpage
+
+		\section{System assessment}\label{sec:assessment }	
+			\subsection{Technology choices}\label{subsec:tech choices}
+			\subsection{Quality and Feasibility of Design}\label{subsec:quality}
+
+	 \cleardoublepage
+	 \section{Appendices}\label{sec:appendices}
+ 		
+	
+
+
+\end{document}
