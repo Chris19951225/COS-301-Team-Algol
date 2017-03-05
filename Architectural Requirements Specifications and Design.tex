@@ -7,6 +7,7 @@
 \usepackage{graphicx}
 \usepackage[section]{placeins}
 \usepackage{titlesec}
+\usepackage{float}
 
 % Set depth for sections (one more than usual)
 \setcounter{secnumdepth}{4}
@@ -34,7 +35,9 @@
 
 	\begin{titlepage}
 		\begin{center}
-
+			\begin{figure}
+				\includegraphics[width=\linewidth]{logo.jpg}	
+			\end{figure}
 			\line(1,0){400}\\
 			[6mm]
 			\huge{
@@ -49,14 +52,14 @@
 			[20mm]
 			\large{\textbf{Created By:}}\\
 			[2mm]
-			\large{
-			% Add your own details here 
-				\href{https://github.com/KeatonPennels}{Keaton Pennels - 14373018}\\
-			}\\
-			[5cm]
-
-		\href{https://github.com/Chris19951225/COS-301-Team-Algol}{\textsc{\Large GitHub Repository - Team Algol}\\[2mm]
-		  For more information, please click here}
+			\href{https://github.com/DuartBreedt}{Duart Breedt - 15054692}\\
+			\href{https://github.com/KeatonPennels}{Keaton Pennels - 14373018}\\
+			[5mm]
+			
+		
+		
+			\href{https://github.com/Chris19951225/COS-301-Team-Algol}{\textsc{\Large GitHub Repository - Team Algol}}\\[2mm]
+			\href{https://github.com/Chris19951225/COS-301-Team-Algol}{\textsc{For more information, please click here}}\\[2mm]
 		\end{center}
 		\begin{flushright}
 			\textsc{\large 26 February 2017}
@@ -111,6 +114,31 @@
 
 		\section{Module Design}\label{sec:moduels}	
 			\subsection{Navigation Subsystem}\label{subsec:navigation}
+				\begin{figure}[H]
+                     \includegraphics[scale=0.5]{Navigation_State_getRoute.png}
+                     \caption{getRoute State Diagram}
+					 \label{fig:navigation_state_getRoute}
+			    \end{figure}
+			    
+			    \begin{figure}[H]
+                     \includegraphics[scale=0.5]{Navigation_State_saveRoute.png}
+                     \caption{saveRoute State Diagram}
+					 \label{fig:navigation_state_saveRoute}
+			    \end{figure}
+			    
+			    \begin{figure}[H]
+                     \includegraphics[scale=0.5]{Navigation_State_deleteRoute.png}
+                     \caption{deleteRoute State Diagram}
+					 \label{fig:navigation_state_deleteRoute}
+			    \end{figure}
+			    
+			    \begin{figure}[H]
+                     \includegraphics[scale=0.5]{Navigation_UseCase.png}
+                     \caption{UseCase Diagram}
+					 \label{fig:navigation_UseCase}
+			    \end{figure}
+
+			    
 			\subsection{User Subsystem}\label{subsec:users}
 			\subsection{Notification Subsystem}\label{subsec:notification}
 			\subsection{Points of Interest Subsystem}\label{subsec:points of interest}
