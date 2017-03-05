@@ -3,7 +3,7 @@
 \usepackage[margin=2.5cm,left=2cm,includefoot]{geometry}
 \usepackage{hyperref}
 \usepackage{array}
-%\usepackage{enumitem}
+\usepackage{enumitem}
 \usepackage{float}
 \usepackage{graphicx}
 \usepackage[section]{placeins}
@@ -151,7 +151,54 @@ A user should also be able to send a notification. The notification page should 
 			The application will be heavily dependent on the device's GPS; without this communication NavUP will be unable to perform any location specific operations (including getting the user's current location). The application also needs a working wireless network connection in order to facilitate communication with the GPS's remote database. The wireless hotspots within the university will also be required to get the user's relative building location; without this, it may be difficult to provide accurate results.
 
 			\subsection{Performance Requirements}\label{subsec:performance}
-				Describe all performance related capabilities of the product
+				This section provides a detailed specification of the user's interaction with NavUP, as well as the measures put in place to ensure good system performance.
+			
+			\subsubsection{Intuitive user interface}
+		    \begin{itemize}
+		    \item[]TITLE      : Intuitive user interface
+		    \item[]DESCRIPTION: The user interface for NavUP should be intuitive and not at any stage confuse users.
+		    \item[]RATIONAL   : This ensures easy navigation for the user when using NavUP.
+		    \item[]DEPENDENCY : No dependencies.
+		    \end{itemize}
+			\subsubsection{Intuitive search feature}
+			\begin{itemize}
+		    \item[]TITLE      : Intuitive search feature
+		    \item[]DESCRIPTION: The user should be provided with clear search results when trying to find locations.
+		    \item[]RATIONAL   : This ensures that users are not confused by the search results, and can understand the details returned by the search results.
+		    \item[]DEPENDENCY : No dependencies.
+		    \end{itemize}	
+			\subsubsection{Intuitive map view}
+			\begin{itemize}
+		    \item[]TITLE      : Intuitive map view
+		    \item[]DESCRIPTION: The map view presented to the user should be easy to understand and leave no room for ambiguous interpretations.
+		    \item[]RATIONAL   : This ensures that the user will be able to use the map view to navigate effectively.
+		    \item[]DEPENDENCY : No dependencies.
+		    \end{itemize}	
+			\subsubsection{Intuitive information/help feature}
+			\begin{itemize}
+		    \item[]TITLE      : Intuitive information/help feature
+		    \item[]DESCRIPTION: The information buttons (seen in the search results) - and help features - should be easy to find and use.
+		    \item[]RATIONAL   : This ensures that users can use information and help features easily, since the users are most likely to interact with these features when using NavUP for the first time.
+		    \item[]DEPENDENCY : No dependencies.
+		    \end{itemize}	
+			\subsubsection{Fast response time}
+			\begin{itemize}
+		    \item[]TITLE      : Fast response time
+		    \item[]DESCRIPTION: Results for getting routes or finding locations should not take much time.
+		    \item[]SCALE      : The time it takes to get a route and find a location.
+		    \item[]METER      : Measured by finding 100 routes and locations, during the testing phase.
+		    \item[]MUST       : Must take no more than 3 seconds 100\% of the time.
+		    \item[]WISH       : Preferably shouldn't take longer than a second, 100\% of the time.  
+		    \end{itemize}
+			\subsubsection{Dependable system}
+			\begin{itemize}
+		    \item[]TITLE      : Dependable system
+		    \item[]DESCRIPTION: NavUP should be able to deal with (recover from) all faults.
+		    \item[]SCALE      : Should a user incorrectly enter search criteria or NavUP not be able to establish an internet connection, a notification should be sent to a user.
+		    \item[]METER      : Measured by using NavUP for at least 10 hours, during the testing phase.
+		    \item[]MUST       : NavUP must be dependable at all times.
+		    \end{itemize}	
+						
 			\subsection{Design Constraints}\label{subsec:design constraints}	
 				Describe all constraints that related to the design phase of the product
 			\subsection{Software System Attributes}\label{subsec:attributes}
