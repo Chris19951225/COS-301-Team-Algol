@@ -1,0 +1,30 @@
+\BOOKMARK [1][-]{section.1}{Introduction}{}% 1
+\BOOKMARK [2][-]{subsection.1.1}{Purpose}{section.1}% 2
+\BOOKMARK [2][-]{subsection.1.2}{Definitions, Acronyms, and Abbreviations}{section.1}% 3
+\BOOKMARK [2][-]{subsection.1.3}{References}{section.1}% 4
+\BOOKMARK [1][-]{section.2}{Requirements and Constraints}{}% 5
+\BOOKMARK [2][-]{subsection.2.1}{External Interface Requirements}{section.2}% 6
+\BOOKMARK [3][-]{subsubsection.2.1.1}{User interfaces}{subsection.2.1}% 7
+\BOOKMARK [3][-]{subsubsection.2.1.2}{Hardware interfaces}{subsection.2.1}% 8
+\BOOKMARK [3][-]{subsubsection.2.1.3}{Software interfaces}{subsection.2.1}% 9
+\BOOKMARK [3][-]{subsubsection.2.1.4}{Communication interfaces}{subsection.2.1}% 10
+\BOOKMARK [2][-]{subsection.2.2}{Performance Requirements}{section.2}% 11
+\BOOKMARK [3][-]{subsubsection.2.2.1}{Intuitive user interface}{subsection.2.2}% 12
+\BOOKMARK [3][-]{subsubsection.2.2.2}{Intuitive search feature}{subsection.2.2}% 13
+\BOOKMARK [3][-]{subsubsection.2.2.3}{Intuitive map view}{subsection.2.2}% 14
+\BOOKMARK [3][-]{subsubsection.2.2.4}{Intuitive information/help feature}{subsection.2.2}% 15
+\BOOKMARK [3][-]{subsubsection.2.2.5}{Fast response time}{subsection.2.2}% 16
+\BOOKMARK [3][-]{subsubsection.2.2.6}{Dependable system}{subsection.2.2}% 17
+\BOOKMARK [2][-]{subsection.2.3}{Design Constraints}{section.2}% 18
+\BOOKMARK [3][-]{subsubsection.2.3.1}{Hard disk drive space}{subsection.2.3}% 19
+\BOOKMARK [3][-]{subsubsection.2.3.2}{Application RAM \(Random-Access-Memory\) usage}{subsection.2.3}% 20
+\BOOKMARK [2][-]{subsection.2.4}{Software System Attributes}{section.2}% 21
+\BOOKMARK [1][-]{section.3}{Module Design}{}% 22
+\BOOKMARK [2][-]{subsection.3.1}{Navigation Subsystem}{section.3}% 23
+\BOOKMARK [2][-]{subsection.3.2}{User Subsystem}{section.3}% 24
+\BOOKMARK [2][-]{subsection.3.3}{Notification Subsystem}{section.3}% 25
+\BOOKMARK [2][-]{subsection.3.4}{Points of Interest Subsystem}{section.3}% 26
+\BOOKMARK [1][-]{section.4}{System assessment}{}% 27
+\BOOKMARK [2][-]{subsection.4.1}{Technology choices}{section.4}% 28
+\BOOKMARK [2][-]{subsection.4.2}{Quality and Feasibility of Design}{section.4}% 29
+\BOOKMARK [1][-]{section.5}{Appendices}{}% 30

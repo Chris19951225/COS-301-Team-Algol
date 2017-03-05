@@ -76,6 +76,7 @@
 			\large{
 			% Add your own details here 
 				\href{https://github.com/KeatonPennels}{Keaton Pennels - 14373018}\\
+				\href{https://github.com/lindelo}{Lindelo Mapumulo - 12002862}\\
 			}
 			[5cm]
 
@@ -232,7 +233,27 @@ A user should also be able to send a notification. The notification page should 
 						
 >>>>>>> refs/remotes/origin/master
 			\subsection{Design Constraints}\label{subsec:design constraints}	
-				Describe all constraints that related to the design phase of the product
+				This section provides the design constraints on NavUP's software, which is caused by the device's hardware.
+				
+		    \subsubsection{Hard disk drive space}
+			\begin{itemize}
+		    \item[]TITLE      : Hard disk drive space
+		    \item[]DESCRIPTION: The amount of space NavUP occupies on installation.
+		    \item[]SCALE      : Megabyte(MB).
+		    \item[]METER      : Monitoring the space occupation during the testing phase.
+		    \item[]MUST       : NavUP shouldn't occupy more than 100MB.
+		    \item[]WISH       : Preferably, NavUP shouldn't occupy more than 50MB.
+		    \end{itemize}
+		    
+		    \subsubsection{Application RAM (Random-Access-Memory) usage}
+			\begin{itemize}
+		    \item[]TITLE      : Application RAM (Random-Access-Memory) usage
+		    \item[]DESCRIPTION: The amount of RAM NavUP uses while running on the device. 
+		    \item[]SCALE      : Megabyte (MB).
+		    \item[]METER      : Monitoring RAM usage during the testing phase.
+		    \item[]MUST       : NavUP shouldn't use more than 50MB of the device's RAM.
+		    \item[]WISH       : Preferably, NavUP shouldn't use more than 30MB of the device's RAM.
+		    \end{itemize}
 			\subsection{Software System Attributes}\label{subsec:attributes}
 
 		\newpage
