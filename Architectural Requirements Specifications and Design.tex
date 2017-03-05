@@ -4,10 +4,10 @@
 \usepackage{hyperref}
 \usepackage{array}
 \usepackage{enumitem}
-\usepackage{float}
 \usepackage{graphicx}
 \usepackage[section]{placeins}
 \usepackage{titlesec}
+\usepackage{float}
 
 % Set depth for sections (one more than usual)
 \setcounter{secnumdepth}{4}
@@ -35,6 +35,9 @@
 
 	\begin{titlepage}
 		\begin{center}
+			\begin{figure}
+				\includegraphics[width=\linewidth]{logo.jpg}	
+			\end{figure}
 
 			\line(1,0){400}\\
 			[6mm]
@@ -43,22 +46,23 @@
 			}\\
 			[2mm]
 			\line(1,0){300}\\
-			[15mm]
+			[10mm]
 			\textsc{\large NavUP}\\
 			[7.5mm]
 			\textsc{\large University of Pretoria - Team Algol}\\
-			[20mm]
+			[10mm]
 			\large{\textbf{Created By:}}\\
 			[2mm]
-			\large{
 			% Add your own details here 
-				\href{https://github.com/KeatonPennels}{Keaton Pennels - 14373018}\\
-				\href{https://github.com/lindelo}{Lindelo Mapumulo - 12002862}\\
-			}
-			[5cm]
+			\href{https://github.com/KeatonPennels}{Keaton Pennels - 14373018}\\
+			\href{https://github.com/lindelo}{Lindelo Mapumulo - 12002862}\\
+			\href{https://github.com/DuartBreedt}{Duart Breedt - 15054692}\\[5mm]
 
-		\href{https://github.com/Chris19951225/COS-301-Team-Algol}{\textsc{\Large GitHub Repository - Team Algol}\\[2mm]
-		  For more information, please click here}
+
+		\href{https://github.com/Chris19951225/COS-301-Team-Algol}{\textsc{\Large GitHub Repository - Team Algol}}
+		\\
+		\href{https://github.com/Chris19951225/COS-301-Team-Algol}{\textsc {For more information, please click here}}
+		  
 		\end{center}
 		\begin{flushright}
 			\textsc{\large 26 February 2017}
@@ -228,6 +232,19 @@ A user should also be able to send a notification. The notification page should 
 
 		\section{Module Design}\label{sec:moduels}	
 			\subsection{Navigation Subsystem}\label{subsec:navigation}
+				\begin{figure}[H]
+                     \includegraphics[height=0.8\textheight]{Navigation_State.png}
+                     \caption{Route Access State Diagram}
+					 \label{fig:navigation_state}
+			    \end{figure}
+			    
+			    \begin{figure}[H]
+                     \includegraphics[width=\textwidth]{Navigation_UseCase.png}
+                     \caption{UseCase Diagram}
+					 \label{fig:navigation_UseCase}
+			    \end{figure}
+
+			    
 			\subsection{User Subsystem}\label{subsec:users}
 			\subsection{Notification Subsystem}\label{subsec:notification}
 			\subsection{Points of Interest Subsystem}\label{subsec:points of interest}
