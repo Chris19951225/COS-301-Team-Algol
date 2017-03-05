@@ -3,7 +3,8 @@
 \usepackage[margin=2.5cm,left=2cm,includefoot]{geometry}
 \usepackage{hyperref}
 \usepackage{array}
-\usepackage{enumitem}
+%\usepackage{enumitem}
+\usepackage{float}
 \usepackage{graphicx}
 \usepackage[section]{placeins}
 \usepackage{titlesec}
@@ -52,7 +53,7 @@
 			\large{
 			% Add your own details here 
 				\href{https://github.com/KeatonPennels}{Keaton Pennels - 14373018}\\
-			}\\
+			}
 			[5cm]
 
 		\href{https://github.com/Chris19951225/COS-301-Team-Algol}{\textsc{\Large GitHub Repository - Team Algol}\\[2mm]
@@ -98,8 +99,56 @@
 		List each document referenced in the SRS by title, report number, date, publisher, and where and how to get it
 		
 	\section{Requirements and Constraints}\label{sec:requirements}
+	The following section provides all the requirements of NavUP, and possible constraints regarding the mobile application.
 			\subsection{External Interface Requirements}\label{subsec:external}
-				Provide a detailed description for each of the system interfaces, user interfaces, hardware interfaces, software interfaces, and communications interfaces. The description of each interface includes for each input and output, the name, format, valid range, timing and other relevant information.
+			This section provides a detailed description of all the inputs and outputs of the system. Descriptions of the user, hardware, software and communication interfaces are also provided.
+			\subsubsection{User interfaces}
+			Upon opening the application, a first time user (or a user that had logged out) should see the splash page - Figure 1. The splash page will allow a user to continue as a guest (without logging in) or login in as a user. The user can either swipe left to login or right to use the application as a guest. \\
+			
+			The log in page (Figure 2) should prompt the user to enter their login details (user name \& password). If the user has not yet created an account, they will be prompted to register a new account before they can use or continue with the application. The user register page bears resemblance to the login page prototype, but includes input fields for the user's email address and two password fields (one for the actual password, and another to verify the previously entered password). \\
+			
+			In addition to being able to register as a new user, a user should be able to view, update and/or delete their profile. The prototype of this page is shown on Figure 3; on this page, a user can perform CRUD operations (excluding CREATE) on their profiles. Admin profiles will have additional options (e.g. making a normal user an administrator user). These options will appear in the "User Details" page.
+\begin{figure}[H]
+    \minipage{0.32\textwidth}
+	\centering{\includegraphics[width=0.5\linewidth]{./images/Splash_Screen.JPG}}
+	\caption{Splash Screen}
+	\endminipage\hfill
+	\minipage{0.32\textwidth}
+	\centering{\includegraphics[width=0.5\linewidth]{./images/Login_Screen.JPG}}
+	\caption{Login Screen}
+	\endminipage\hfill
+	\minipage{0.32\textwidth}
+	\centering{\includegraphics[width=0.5\linewidth]{./images/User_Details.JPG}}
+	\caption{User Details Screen}
+	\endminipage\hfill
+\end{figure}
+
+A user should be able to find the directions between two (or more) points. The user should also be provided with additional features to improve the navigation between these points, these include but are not limited to the shortest route. Figure 4 shows the search page to find directions between two points, and Figure 5 shows the results and further filtering options to improve the nature of the directions.\\
+
+\begin{figure}[H]
+    \minipage{0.3\textwidth}
+	\centering{\includegraphics[width=0.5\linewidth]{./images/Get_Directions_Search.JPG}}
+	\caption{Get Directions Search Screen}
+	\endminipage\hfill
+	\minipage{0.3\textwidth}
+	\centering{\includegraphics[width=0.5\linewidth]{./images/Get_Directions_Results.JPG}}
+	\caption{Get Directions Result Screen}
+	\endminipage\hfill
+	\minipage{0.3\textwidth}
+	\centering{\includegraphics[width=0.5\linewidth]{./images/POI_Results.JPG}}
+	\caption{Search Locations Result(s) Screen}
+	\endminipage\hfill
+\end{figure}
+
+Users should also be able to get their current location, save various points of interest and search for a location. Figure 6 shows the prototype page for the results produced after a user has searched for a location. \\
+
+A user should also be able to send a notification. The notification page should have a similar layout as the other pages shown across Figure 1 - 6.
+			\subsubsection{Hardware interfaces}
+			Since NavUP uses existing hardware (i.e. smart devices), it does not require direct hardware interfaces other than the interfaces that are provided by the user's device. The GPS features are explicitly managed by the user's device, particularly the operating system on which the device runs.
+			\subsubsection{Software interfaces}
+			NavUP communicates with the device's GPS to get data about the user's location and the other geographical information regarding the user's location. Furthermore, the application communicates with the on-campus wireless hotspots to tag the relative location of a user within a building. NavUP will mostly just perform read operations, which are communicated to the application via the device's operating system.
+			\subsubsection{Communication interfaces}
+			The application will be heavily dependent on the device's GPS; without this communication NavUP will be unable to perform any location specific operations (including getting the user's current location). The application also needs a working wireless network connection in order to facilitate communication with the GPS's remote database. The wireless hotspots within the university will also be required to get the user's relative building location; without this, it may be difficult to provide accurate results.
 
 			\subsection{Performance Requirements}\label{subsec:performance}
 				Describe all performance related capabilities of the product
