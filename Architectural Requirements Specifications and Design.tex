@@ -58,7 +58,8 @@
 			\href{https://github.com/KeatonPennels}{Keaton Pennels - 14373018}\\
 			\href{https://github.com/Chris19951225}{Hristian Vitrychenko - 15006442}\\
       \href{https://github.com/lindelo}{Lindelo Mapumulo - 12002862}\\
-			\href{https://github.com/DuartBreedt}{Duart Breedt - 15054692}\\[5mm]
+			\href{https://github.com/DuartBreedt}{Duart Breedt - 15054692}\\
+			\href{https://github.com/roberttrankle}{Robert Trankle - 15092454}\\[5mm]
 
 
 		\href{https://github.com/Chris19951225/COS-301-Team-Algol}{\textsc{\Large GitHub Repository - Team Algol}}
@@ -235,6 +236,32 @@ A user should also be able to send a notification. The notification page should 
 
 		\section{Module Design}\label{sec:moduels}	
       \subsection{User Management Subsystem}\label{subsec:users}
+      
+      
+      		\begin{figure}[H]
+                    \centering \includegraphics[height=0.85\textheight]{UMM-Diagrams/UMM-ActivityDiagram}
+                     \caption{User Management Model Activity Diagram}
+					 \label{fig:user_activity}
+			    \end{figure}
+			    {The activity diagram for the User Management Model is displayed in the figure above. It illustrates the registration and login steps of the system, when a user connects as a guest.egistration and login steps of the system, when a user connects as a guest. \\\\
+				Initially the guest user will connect to the service/system, it will then be able to login or register. If the User chooses neither of these option it will be displayed the Public services of the system, and it will not be able to access the attributes of being a registered user.\\\\
+				If the user wishes to register/login then it will be displayed the register/login page. A registered user will need to enter its credentials to login and if the correct information is entered then it will display the logged-in page, where it can view its information. If the incorrect information is entered, an error message will be displayed and the user will be able to re-enter its credentials.\\\\
+				If a user wishes to register, the system will display the registration page and the user will need to enter in the registration information.  The system will check if the email is registred and if it is then it will display an error message. If the email is not registered it will create the account and notify the user that its account has been created.\\\\
+				If the user is an admin, it will be able to access the admin rights from the logged-in page.}
+				\begin{figure}[H]
+                    \centering \includegraphics[height=0.55\textheight]{UMM-Diagrams/UMM-SequenceDiagram}
+                     \caption{User Management Model Sequence Diagram}
+					 \label{fig:user_sequence}
+			    \end{figure}
+			    {This Diagram shows the sequence of events the system will use to register a user. The Controller class will first authenticate the email address, and check that it is not currently in the system already and that it is a valid email address. Once this is done the Controller class will use the Participant class to register the user with a name, surname, email address and password. The Participant class will then create the user and set the appropriate fields in the User class. After this is done a boolean variable will be sent back to the controller class indicating if the registration was successful.\\\\
+			    The System will then encrypt and store the password on its database, this is to ensure that the user password cannot be compromised.}
+			    \begin{figure}[H]
+                    \centering \includegraphics[height=0.55\textheight]{UMM-Diagrams/UMMUseCase}
+                     \caption{User Management Model Use Case Diagram}
+					 \label{fig:user_usecase}
+			    \end{figure}
+			    
+			    
 			\subsection{Navigation Subsystem}\label{subsec:navigation}
 			
 			\subsection{Notification Subsystem}\label{subsec:notification}
