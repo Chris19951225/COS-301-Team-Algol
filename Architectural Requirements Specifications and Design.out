@@ -25,11 +25,13 @@
 \BOOKMARK [3][-]{subsubsection.2.4.4}{Usability}{subsection.2.4}% 25
 \BOOKMARK [3][-]{subsubsection.2.4.5}{Scalability}{subsection.2.4}% 26
 \BOOKMARK [1][-]{section.3}{Module Design}{}% 27
-\BOOKMARK [2][-]{subsection.3.1}{Navigation Subsystem}{section.3}% 28
-\BOOKMARK [2][-]{subsection.3.2}{User Subsystem}{section.3}% 29
+\BOOKMARK [2][-]{subsection.3.1}{User Management Subsystem}{section.3}% 28
+\BOOKMARK [2][-]{subsection.3.2}{Navigation Subsystem}{section.3}% 29
 \BOOKMARK [2][-]{subsection.3.3}{Notification Subsystem}{section.3}% 30
-\BOOKMARK [2][-]{subsection.3.4}{Points of Interest Subsystem}{section.3}% 31
-\BOOKMARK [1][-]{section.4}{System assessment}{}% 32
-\BOOKMARK [2][-]{subsection.4.1}{Technology choices}{section.4}% 33
-\BOOKMARK [2][-]{subsection.4.2}{Quality and Feasibility of Design}{section.4}% 34
-\BOOKMARK [1][-]{section.5}{Appendices}{}% 35
+\BOOKMARK [2][-]{subsection.3.4}{User Subsystem}{section.3}% 31
+\BOOKMARK [2][-]{subsection.3.5}{Notification Subsystem}{section.3}% 32
+\BOOKMARK [2][-]{subsection.3.6}{Points of Interest Subsystem}{section.3}% 33
+\BOOKMARK [1][-]{section.4}{System assessment}{}% 34
+\BOOKMARK [2][-]{subsection.4.1}{Technology choices}{section.4}% 35
+\BOOKMARK [2][-]{subsection.4.2}{Quality and Feasibility of Design}{section.4}% 36
+\BOOKMARK [1][-]{section.5}{Appendices}{}% 37
