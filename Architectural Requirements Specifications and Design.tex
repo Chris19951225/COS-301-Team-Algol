@@ -267,27 +267,28 @@ A user should also be able to send a notification. The notification page should 
 			\subsection{Notification Subsystem}\label{subsec:notification}
 			
 				\begin{figure}[h!]
-					\includegraphics[scale=0.5]{Class_Diagram_Notifications.JPG}
+					\includegraphics[scale=0.5]{Diagrams/Class_Diagram_Notifications.JPG}
 					\caption{Notifications Subsystem Class Diagram}	
 				\end{figure}
+				{The class diagram depicts how the Notification Subsystem implements itself based on the logic of the Factory Method design pattern. Notification Request contains a Notification object. Notification Request is created in Notification Manager (which acts as the factory) where it is stored in a list to be processed. Requests are then checked in the Manager for validity and existence of required users and, after passing validation, are sent to the user.\\\\}
 			
 				\begin{figure}[h!]
-					\includegraphics[scale=0.5]{Activity_Diagram_Notifications.JPG}
+					\includegraphics[scale=0.5]{Diagrams/Activity_Diagram_Notifications.JPG}
 					\caption{Natifications Subsystem Activity Diagram}	
 				\end{figure}
 				
 				\begin{figure}[h!]
-					\includegraphics[scale=0.5]{Sequence_Diagram_Notifications.JPG}
+					\includegraphics[scale=0.5]{Diagrams/Sequence_Diagram_Notifications.JPG}
 					\caption{Notifications Subsystem Sequence Diagram}	
 				\end{figure}
 				
 				\begin{figure}[h!]
-					\includegraphics[scale=0.5]{State_Diagram_Notifications.JPG}
+					\includegraphics[scale=0.5]{Diagrams/State_Diagram_Notifications.JPG}
 					\caption{Notifications Subsystem State Diagram}	
 				\end{figure}
 				
 				\begin{figure}[h!]
-					\includegraphics[scale=0.5]{Use_Case_Diagram_Notifications.JPG}
+					\includegraphics[scale=0.5]{Diagram/Use_Case_Diagram_Notifications.JPG}
 					\caption{Notifications Subsystem Use Case Diagram}	
 				\end{figure}
 				
