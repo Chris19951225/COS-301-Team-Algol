@@ -56,7 +56,8 @@
 			% Add your own details here 
 			\href{https://github.com/KeatonPennels}{Keaton Pennels - 14373018}\\
 			\href{https://github.com/lindelo}{Lindelo Mapumulo - 12002862}\\
-			\href{https://github.com/DuartBreedt}{Duart Breedt - 15054692}\\[5mm]
+			\href{https://github.com/DuartBreedt}{Duart Breedt - 15054692}\\
+			\href{https://github.com/lindelo}{Keegan Ferrett - 15132847}\\[5mm]
 
 
 		\href{https://github.com/Chris19951225/COS-301-Team-Algol}{\textsc{\Large GitHub Repository - Team Algol}}
@@ -251,19 +252,27 @@ A user should also be able to send a notification. The notification page should 
 			\newpage
 			\subsection{Points of Interest Subsystem}\label{subsec:points of interest}
 				\begin{figure}[H]
-		 \includegraphics[height=0.8\textheight]{PoI_Class.png}
-                     \caption{Point of Interest Class Diagram}
+				 \includegraphics[height=0.8\textheight]{PoI_Class.png}
+                     			 \caption{Point of Interest Class Diagram}
 					 \label{fig:PoI_class}
-			    \end{figure}
+			   	 \end{figure}
 
-			\begin{figure}[H]
-		 \includegraphics[height=0.8\textheight]{PoI_UseCase.png}
-                     \caption{Point of Interest Use Case Diagram}
+				\begin{figure}[H]
+		 		\includegraphics[height=0.8\textheight]{PoI_UseCase.png}
+                     			\caption{Point of Interest Use Case Diagram}
 					 \label{fig:PoI_UseCase}
-			    \end{figure}
+			    	\end{figure}
+				
+				\subsubsection{Software system attributes}
+
+The Point of Interest system will be implemented in 10 classes, making use of two of the classical design patterns, to help decouple the system from the rest of the application. The Facade and Factory design happens where choosen for this implementation.\\
+
+\begin{itemize}
+  \item The \textbf{Facade} design pattern was implemented with the LocationAccess and Location Manager (both inheriting from the LocationFacade class) as the Facades and having used RegularUser and AdminUser (both inheriting from User) as the Clients of the design pattern. The implementaion of this design pattern will happen managering the list of location easier for both the user and the admin and give certain functionality to each user group that the other should not have access to.
+  \item The \textbf{Factory} design pattern was implemented using the LocationFactory class as the Factory and the Location class as the products of the design pattern. The purpose of including this design pattern is to hide the creation of locations to be saved from the users and to keep the references of Location objects away from the users.
+\end{itemize}
 
 		\newpage
-
 		\section{System assessment}\label{sec:assessment }	
 			\subsection{Technology choices}\label{subsec:tech choices}
 			\subsection{Quality and Feasibility of Design}\label{subsec:quality}
