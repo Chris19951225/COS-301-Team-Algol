@@ -276,6 +276,7 @@ A user should also be able to send a notification. The notification page should 
 					\includegraphics[scale=0.5]{Diagrams/Activity_Diagram_Notifications.JPG}
 					\caption{Natifications Subsystem Activity Diagram}	
 				\end{figure}
+				{The activity diagram of the Notifications Subsystem depicts how the Notifications Manager is the centre point of system. It is stimulated by an external event which causes it to create a Notification Request, which in turn instantiates a new Notification. The Notification Request then asks the Notification Manager if it can be sent to a user. The Manager then checks if the user is in the system and verifies the request. If it is a valid request, it is sent to the user via SMS or email. If not, it is cancelled and pending requests are processed.\\\\}
 				
 				\begin{figure}[h!]
 					\includegraphics[scale=0.5]{Diagrams/Sequence_Diagram_Notifications.JPG}
