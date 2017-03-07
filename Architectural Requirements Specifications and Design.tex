@@ -288,6 +288,7 @@ A user should also be able to send a notification. The notification page should 
 					\includegraphics[scale=0.5]{Diagrams/State_Diagram_Notifications.JPG}
 					\caption{Notifications Subsystem State Diagram}	
 				\end{figure}
+				{The state diagram of the Notifications subsystem displays how the Notification Manager starts without a Notification request. It then proceeds to create said request which in turn creates a Notification. Once the Notification Request is presented for checking, the system shifts from a creating state to a validation state. If validation succeeds, the system changes to a dispatching state and the Notification is sent to the User.\\\\}
 				
 				\begin{figure}[h!]
 					\includegraphics[scale=0.5]{Diagram/Use_Case_Diagram_Notifications.JPG}
