@@ -264,6 +264,27 @@ A user should also be able to send a notification. The notification page should 
 			    
 			\subsection{Navigation Subsystem}\label{subsec:navigation}
 			
+							\begin{figure}[h!]
+					\includegraphics[scale=0.5]{Diagrams/Class_Diagram_Navigation.JPG}
+					\caption{Navigation Subsystem Class Diagram}	
+				\end{figure}
+				{Using the llll design partern the navigation class diagram depicts how the user object interacts with other navigation  modules i.e the location module used to rerurn the users current location using the getCurrent location function and the route access that get and or calculates the route using waypoints returned from the waypoints class.\\\\}
+			
+				\begin{figure}[H]
+					\includegraphics[scale=0.3]{Diagrams/Activity_Diagram_Navigation.JPG}
+					\caption{Navigation Activity Diagram}	
+				\end{figure}
+				{This Diagram models the activity of the interaction for navifation during the users whole navigation cycle from when the users selects their destination and their route is calculated till they complete their travel.\\\\}
+				
+								\begin{figure}[H]
+					\includegraphics[scale=0.5]{Diagrams/Sequence_Diagram_Navigation.JPG}
+					\caption{Navigation Sequence Diagram}	
+				\end{figure}
+				{This Navigation Sequence Diagram shows how Navigation objects operate with one another and in what order. It does this using a construct of messages to and from modules. this diagram shows object interactions arranged in time sequence.\\\\}
+				
+				
+			
+			
 			\subsection{Notification Subsystem}\label{subsec:notification}
 			
 				\begin{figure}[h!]
@@ -290,10 +311,10 @@ A user should also be able to send a notification. The notification page should 
 				\end{figure}
 				{The state diagram of the Notifications subsystem displays how the Notification Manager starts without a Notification request. It then proceeds to create said request which in turn creates a Notification. Once the Notification Request is presented for checking, the system shifts from a creating state to a validation state. If validation succeeds, the system changes to a dispatching state and the Notification is sent to the User.\\\\}
 				
-				\begin{figure}[h!]
-					\includegraphics[scale=0.5]{Diagram/Use_Case_Diagram_Notifications.JPG}
-					\caption{Notifications Subsystem Use Case Diagram}	
-				\end{figure}
+%				\begin{figure}[h!]
+%					\includegraphics[scale=0.5]{Diagram/Use_Case_Diagram_Notifications.JPG}
+%					\caption{Notifications Subsystem Use Case Diagram}	
+%				\end{figure}
 				{The use case diagram of the Notifications subsystem depicts how important the Notification Manager is for the functionality and goal of the subsystem. It shows how all the important actions take place due to the Manager and how without it the system would collapse. It also shows how the user is hardly involved in the subsystem except to receive validated Notifications.\\\\}
 				
 				\begin{figure}[H]
