@@ -264,11 +264,11 @@ A user should also be able to send a notification. The notification page should 
 			    
 			\subsection{Navigation Subsystem}\label{subsec:navigation}
 			
-							\begin{figure}[H]
+							\begin{figure}[h!]
 					\includegraphics[scale=0.5]{Diagrams/Class_Diagram_Navigation.JPG}
 					\caption{Navigation Subsystem Class Diagram}	
 				\end{figure}
-				{Using the Composite design partern by providing the interface to which the user interacts with, the navigation class diagram shows how the user object interacts with other navigation  modules i.e the location module used to returns the users current location using the getCurrent location function and the route access that get and or calculates the route using waypoints returned from the waypoints class.\\\\}
+				{Using the llll design partern the navigation class diagram depicts how the user object interacts with other navigation  modules i.e the location module used to rerurn the users current location using the getCurrent location function and the route access that get and or calculates the route using waypoints returned from the waypoints class.\\\\}
 			
 				\begin{figure}[H]
 					\includegraphics[scale=0.3]{Diagrams/Activity_Diagram_Navigation.JPG}
