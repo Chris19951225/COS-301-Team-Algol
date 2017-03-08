@@ -37,7 +37,7 @@
 		\begin{center}
 
 			\begin{figure}
-				\includegraphics[width=\linewidth]{logo.jpg}	
+				\includegraphics[width=\linewidth]{images/logo.jpg}	
 			\end{figure}
 
 			\line(1,0){400}\\
@@ -264,7 +264,7 @@ A user should also be able to send a notification. The notification page should 
 			    
 			\subsection{Navigation Subsystem}\label{subsec:navigation}
 			
-							\begin{figure}[H]
+				\begin{figure}[H]
 					\includegraphics[scale=0.5]{Diagrams/Class_Diagram_Navigation.JPG}
 					\caption{Navigation Subsystem Class Diagram}	
 				\end{figure}
@@ -276,11 +276,35 @@ A user should also be able to send a notification. The notification page should 
 				\end{figure}
 				{This Diagram models the activity of the interaction for navifation during the users whole navigation cycle from when the users selects their destination and their route is calculated till they complete their travel.\\\\}
 				
-								\begin{figure}[H]
+				\begin{figure}[H]
 					\includegraphics[scale=0.5]{Diagrams/Sequence_Diagram_Navigation.JPG}
 					\caption{Navigation Sequence Diagram}	
 				\end{figure}
 				{This Navigation Sequence Diagram shows how Navigation objects operate with one another and in what order. It does this using a construct of messages to and from modules. this diagram shows object interactions arranged in time sequence.\\\\}
+				
+				\begin{figure}[H]
+                     \includegraphics[height=0.8\textheight]{Diagrams/Navigation_State.png}
+                     \caption{Route Access State Diagram}
+					 \label{fig:navigation_state}
+			    \end{figure}
+			    {The states of the navigation module concern three main functions. Namely, getRoute, deleteRoute, and saveRoute. Before any one function is called the system will be in a state of awaiting a user request.\\
+			    
+			    getRoute:\\
+			    When a user requests a route the client will send a request to the application server to query a database for the route. The application server will idle and constantly check for a response. If the route was previously saved it is returned to the client. Otherwise the server calculates the route according to user preferences and returns the route to the user.\\
+			    
+			    deleteRoute:\\
+			    When a request for the deletion of a route is made the server enters a confirmation state which awaits user input in order to delete the route.\\
+			    
+			    saveRoute:\\
+			    The system queries the database of saved routes to ensure a route isn't saved twice. If there are no duplicates, the server attempts to save the route to the database until it succeeds.\\
+			    }
+			    
+			    \begin{figure}[H]
+                     \includegraphics[width=\textwidth]{Diagrams/Navigation_UseCase.png}
+                     \caption{UseCase Diagram}
+					 \label{fig:navigation_UseCase}
+			    \end{figure}
+			    {getRoute, deleteRoute, saveRoute, and modifyRoute extend route access in the navigation module. The users interact with routeAccess to increase "plugability" of available functions. When getRoute is called it either instantiates calculateSimplestRoute or calculateShortestRoute depending on the user preferences.\\\\}
 				
 				
 			
@@ -295,7 +319,7 @@ A user should also be able to send a notification. The notification page should 
 			
 				\begin{figure}[h!]
 					\includegraphics[scale=0.5]{Diagrams/Activity_Diagram_Notifications.JPG}
-					\caption{Natifications Subsystem Activity Diagram}	
+					\caption{Notifications Subsystem Activity Diagram}	
 				\end{figure}
 				{The activity diagram of the Notifications Subsystem depicts how the Notifications Manager is the centre point of system. It is stimulated by an external event which causes it to create a Notification Request, which in turn instantiates a new Notification. The Notification Request then asks the Notification Manager if it can be sent to a user. The Manager then checks if the user is in the system and verifies the request. If it is a valid request, it is sent to the user via SMS or email. If not, it is cancelled and pending requests are processed.\\\\}
 				
@@ -316,33 +340,20 @@ A user should also be able to send a notification. The notification page should 
 %					\caption{Notifications Subsystem Use Case Diagram}	
 %				\end{figure}
 				{The use case diagram of the Notifications subsystem depicts how important the Notification Manager is for the functionality and goal of the subsystem. It shows how all the important actions take place due to the Manager and how without it the system would collapse. It also shows how the user is hardly involved in the subsystem except to receive validated Notifications.\\\\}
-				
-				\begin{figure}[H]
-                     \includegraphics[height=0.8\textheight]{Navigation_State.png}
-                     \caption{Route Access State Diagram}
-					 \label{fig:navigation_state}
-			    \end{figure}
 			    
-			    \begin{figure}[H]
-                     \includegraphics[width=\textwidth]{Navigation_UseCase.png}
-                     \caption{UseCase Diagram}
-					 \label{fig:navigation_UseCase}
-			    \end{figure}
-
-			    
-			\subsection{User Subsystem}\label{subsec:users}
-			\subsection{Notification Subsystem}\label{subsec:notification}
+			%\subsection{User Subsystem}\label{subsec:users}
+			%\subsection{Notification Subsystem}\label{subsec:notification}
 
 			\newpage
 			\subsection{Points of Interest Subsystem}\label{subsec:points of interest}
 				\begin{figure}[H]
-		 \includegraphics[height=0.8\textheight]{PoI_Class.png}
+		 \includegraphics[height=0.8\textheight]{Diagrams/PoI_Class.png}
                      \caption{Point of Interest Class Diagram}
 					 \label{fig:PoI_class}
 			    \end{figure}
 
 			\begin{figure}[H]
-		 \includegraphics[height=0.8\textheight]{PoI_UseCase.png}
+		 \includegraphics[height=0.8\textheight]{Diagrams/PoI_UseCase.png}
                      \caption{Point of Interest Use Case Diagram}
 					 \label{fig:PoI_UseCase}
 			    \end{figure}
