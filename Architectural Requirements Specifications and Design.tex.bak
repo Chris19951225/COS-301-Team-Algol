@@ -290,10 +290,10 @@ A user should also be able to send a notification. The notification page should 
 				\end{figure}
 				{The state diagram of the Notifications subsystem displays how the Notification Manager starts without a Notification request. It then proceeds to create said request which in turn creates a Notification. Once the Notification Request is presented for checking, the system shifts from a creating state to a validation state. If validation succeeds, the system changes to a dispatching state and the Notification is sent to the User.\\\\}
 				
-%				\begin{figure}[h!]
-%					\includegraphics[scale=0.5]{Diagram/Use_Case_Diagram_Notifications.JPG}
-%					\caption{Notifications Subsystem Use Case Diagram}	
-%				\end{figure}
+				\begin{figure}[h!]
+					\includegraphics[scale=0.5]{Diagram/Use_Case_Diagram_Notifications.JPG}
+					\caption{Notifications Subsystem Use Case Diagram}	
+				\end{figure}
 				{The use case diagram of the Notifications subsystem depicts how important the Notification Manager is for the functionality and goal of the subsystem. It shows how all the important actions take place due to the Manager and how without it the system would collapse. It also shows how the user is hardly involved in the subsystem except to receive validated Notifications.\\\\}
 				
 				\begin{figure}[H]
@@ -330,6 +330,28 @@ A user should also be able to send a notification. The notification page should 
 
 		\section{System assessment}\label{sec:assessment }	
 			\subsection{Technology choices}\label{subsec:tech choices}
+			
+							{Moble application Technology\\
+For the mobile app technology we have chosen to react native because 
+With React Native, you don't build a “mobile web app”, an “HTML5 app”, or a “hybrid app”.
+ You build a real mobile app that's indistinguishable from an app built using Objective-C or Java.
+ React Native uses the same fundamental UI building blocks as regular iOS and Android apps.
+ You just put those building blocks together using JavaScript and React.
+React Native lets you build your app faster. Instead of recompiling, you can reload your app instantly. With hot reloading,
+ you can even run new code while retaining your application state.\\
+
+Web Api\\
+For the web api we have selected node.js becauese,it is one of the best latest technologies that work best for mobile app development, Node.js uses an event-driven,
+ non-blocking I/O model that makes it lightweight and efficient. Node.js' package ecosystem,
+ npm, is the largest ecosystem of open source libraries in the world.\\
+ 
+Database Server\\
+For this System we have chosen Mongodb because it is the best noSQL database technology out there and it uses JSON-like documents with schemas.
+It can be used as a file system with load balancing and data replication features over multiple machines for storing files.
+and because if its architecture it is built to handle millions of records without compromising on performance.
+.\\\\}
+			
+			
 			\subsection{Quality and Feasibility of Design}\label{subsec:quality}
 
 	 \cleardoublepage
