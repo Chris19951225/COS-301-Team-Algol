@@ -97,6 +97,13 @@
 					\hline
 					\textbf{Term} & \textbf{Definition} \\
 					\hline
+					SCALE & Scale to measure the requirement \\
+					\hline
+					METER & Location of the requirement on the scale  \\
+					\hline
+					MUST & Mandatory requirement to ensure good system performance \\
+					\hline
+					WISH & Preferred requirement to ensure good system performance \\
 					\hline
 					
 				\end{tabular}
@@ -111,9 +118,11 @@
 			\subsection{External Interface Requirements}\label{subsec:external}
 			This section provides a detailed description of all the inputs and outputs of the system. Descriptions of the user, hardware, software and communication interfaces are also provided.
 			\subsubsection{User interfaces}
-			Upon opening the application, a first time user (or a user that had logged out) should see the splash page - Figure 1. The splash page will allow a user to continue as a guest (without logging in) or login in as a user. The user can either swipe left to login or right to use the application as a guest. \\
+			Upon opening the application, a first time user (or a user that had logged out) should see the splash page - Figure 1. The splash page will allow a user to continue as a guest (without logging in) or login in as a user. The user can either swipe left to login or right to use the application as a guest. 
+			If a user chooses to use NavUP as a guest, then they are directed to a landing page. The landing page includes an interactive list of all the features (e.g. Location Access, Route Access, Profile Information)in NavUP. \\
 			
-			The log in page (Figure 2) should prompt the user to enter their login details (user name \& password). If the user has not yet created an account, they will be prompted to register a new account before they can use or continue with the application. The user register page bears resemblance to the login page prototype, but includes input fields for the user's email address and two password fields (one for the actual password, and another to verify the previously entered password). \\
+			The log in page (Figure 2) should prompt the user to enter their login details (user name \& password). If the user has not yet created an account, they will be prompted to register a new account before they can use or continue with the application. 
+			The user register page bears resemblance to the login page prototype, but includes input fields for the user's email address and two password fields (one for the actual password, and another to verify the previously entered password). The chosen username should not be an existing one, and should also not be longer than 15 alphanumeric characters). The user's password needs to be at least eight characters, and must include at least one number. \\
 			
 			In addition to being able to register as a new user, a user should be able to view, update and/or delete their profile. The prototype of this page is shown on Figure 3; on this page, a user can perform CRUD operations (excluding CREATE) on their profiles. Admin profiles will have additional options (e.g. making a normal user an administrator user). These options will appear in the "User Details" page.
 \begin{figure}[H]
@@ -131,7 +140,7 @@
 	\endminipage\hfill
 \end{figure}
 
-A user should be able to find the directions between two (or more) points. The user should also be provided with additional features to improve the navigation between these points, these include but are not limited to the shortest route. Figure 4 shows the search page to find directions between two points, and Figure 5 shows the results and further filtering options to improve the nature of the directions.\\
+A user should be able to find the directions between two (or more) points by entering the name of the points. The user should also be provided with additional features to improve the navigation between these points, these include but are not limited to the shortest route and the simplest route. Figure 4 shows the search page to find directions between two points, and Figure 5 shows the results and further filtering options to improve the nature of the directions.\\
 
 \begin{figure}[H]
     \minipage{0.3\textwidth}
@@ -150,7 +159,9 @@ A user should be able to find the directions between two (or more) points. The u
 
 Users should also be able to get their current location, save various points of interest and search for a location. Figure 6 shows the prototype page for the results produced after a user has searched for a location. \\
 
-A user should also be able to send a notification. The notification page should have a similar layout as the other pages shown across Figure 1 - 6.
+A user should also be able to send a notification. The notification page should have a similar layout as the other pages shown across Figure 1 - 6. The body of the notification should not be longer than 140 characters.
+
+The web-based component of NavUP should be similar to the mobile-based component. The layout, however, should be relevant to a web-only device. Features such as sliding left or right should be replaced by appropriate gestures.
 			\subsubsection{Hardware interfaces}
 			Since NavUP uses existing hardware (i.e. smart devices), it does not require direct hardware interfaces other than the interfaces that are provided by the user's device. The GPS features are explicitly managed by the user's device, particularly the operating system on which the device runs.
 			\subsubsection{Software interfaces}
@@ -215,7 +226,7 @@ A user should also be able to send a notification. The notification page should 
 		    \item[]TITLE      : Hard disk drive space
 		    \item[]DESCRIPTION: The amount of space NavUP occupies on installation.
 		    \item[]SCALE      : Megabyte(MB).
-		    \item[]METER      : Monitoring the space occupation during the testing phase.
+		    \item[]METER      : Monitoring the space occupation (in megabytes) during the testing phase.
 		    \item[]MUST       : NavUP shouldn't occupy more than 100MB.
 		    \item[]WISH       : Preferably, NavUP shouldn't occupy more than 50MB.
 		    \end{itemize}
@@ -225,12 +236,29 @@ A user should also be able to send a notification. The notification page should 
 		    \item[]TITLE      : Application RAM (Random-Access-Memory) usage
 		    \item[]DESCRIPTION: The amount of RAM NavUP uses while running on the device. 
 		    \item[]SCALE      : Megabyte (MB).
-		    \item[]METER      : Monitoring RAM usage during the testing phase.
+		    \item[]METER      : Monitoring RAM usage (in megabytes) during the testing phase.
 		    \item[]MUST       : NavUP shouldn't use more than 50MB of the device's RAM.
 		    \item[]WISH       : Preferably, NavUP shouldn't use more than 30MB of the device's RAM.
 		    \end{itemize}
 			\subsection{Software System Attributes}\label{subsec:attributes}
-
+			This section provides descriptions for the quality requirements: security, maintainability, availability, usability and scalability.
+			
+			\subsubsection{Security}
+			Security is currently not a top priority for NavUP since the biggest threat is unauthorized access to users' geographical data within the university. However, this data should still be kept confidential via encryption. Users should be authenticated to ensure that they do not have unauthorized access to other users' profiles and/or administration privileges.
+			 
+			\subsubsection{Maintainability}
+			The technologies used for NavUP should be relevant and expected to be relevant for the longest possible time. Software Developers that were not involved in the initial development process should be able to understand the system in order to improve the software. This is very necessary when new features are required and/or depleted features need to be removed.
+			
+			\subsubsection{Availability}
+			NavUP should always be available, especially during "peak-usage" times like the beginning of every academic year and Open Day. Addition/removal of features should not affect the availability of NavUP. Finally, NavUP shouldn't have a single point-of-failure; the application should continue functioning even if one or more feature(s) fail.
+			
+			\subsubsection{Usability}
+			Since users with different technological backgrounds are expected to use NavUP, the user interface (UI) needs to conform to good UI design standards. The system should never at any point confuse users, and should be as interactive as possible.
+			Usability tests need to be performed on users with different technological backgrounds to find any issues with the general front-end design of NavUP. These problems should be addressed before deployment to ensure a fun and easy to use system. Finally, the system should cater for at least three most spoken languages by students/staff members of the university.
+			
+			\subsubsection{Scalability}
+			NavUP has the potential of being used by over 50 000 students/staff members/guests. The system needs to be able to still function normally even when too many users are interacting with NavUP.
+			
 		\newpage
 
 		\section{Module Design}\label{sec:moduels}	
@@ -240,27 +268,27 @@ A user should also be able to send a notification. The notification page should 
 			\subsection{Notification Subsystem}\label{subsec:notification}
 			
 				\begin{figure}[h!]
-					\includegraphics[scale=0.5]{Class_Diagram_Notifications.JPG}
+					\includegraphics[scale=0.5]{./Diagrams/Class_Diagram_Notifications.JPG}
 					\caption{Notifications Subsystem Class Diagram}	
 				\end{figure}
 			
 				\begin{figure}[h!]
-					\includegraphics[scale=0.5]{Activity_Diagram_Notifications.JPG}
+					\includegraphics[scale=0.5]{./Diagrams/Activity_Diagram_Notifications.JPG}
 					\caption{Natifications Subsystem Activity Diagram}	
 				\end{figure}
 				
 				\begin{figure}[h!]
-					\includegraphics[scale=0.5]{Sequence_Diagram_Notifications.JPG}
+					\includegraphics[scale=0.5]{./Diagrams/Sequence_Diagram_Notifications.JPG}
 					\caption{Notifications Subsystem Sequence Diagram}	
 				\end{figure}
 				
 				\begin{figure}[h!]
-					\includegraphics[scale=0.5]{State_Diagram_Notifications.JPG}
+					\includegraphics[scale=0.5]{./Diagrams/State_Diagram_Notifications.JPG}
 					\caption{Notifications Subsystem State Diagram}	
 				\end{figure}
 				
 				\begin{figure}[h!]
-					\includegraphics[scale=0.5]{Use_Case_Diagram_Notifications.JPG}
+					\includegraphics[scale=0.5]{./Diagrams/Use_Case_Diagram_Notifications.JPG}
 					\caption{Notifications Subsystem Use Case Diagram}	
 				\end{figure}
 				
