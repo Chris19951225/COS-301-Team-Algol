@@ -244,6 +244,11 @@ A user should also be able to send a notification. The notification page should 
 	
 		The above diagram depicts a class diagram of the User Management Model. A The Participant class is a abstract class which defines the common attributes and methods associated with the two main personnel who will interact with NavUp, namely Users and Administrators, which are the concrete implementations of Participant.\\\\
 		The only difference between the User and Administrators is the value stored in their respective isAdmin fields when initiated. Admin uses will also be allowed to managed the venues and activity models. In terms Guest, the third and final type of Participant, no data is stored with regards to guest User but is identified in the diagram to indicate a Guest user's interaction within the User Management model\\\\
+			The Decorator design pattern was employed within this class diagram. This will allow those who implement this system to add new functionality to the existing Participant class without altering its structure. The AdminEnhancer is a wrapper class for the concrete Admin class which allows for the dynamic additions of states and responsibilities as well as preventing unneeded subclassing \\\\
+		\\\\
+		The Controller class is involved with all user persistence activities. The required functionality such as encryption of passwords, creations of userID and authetication of emails and usernames. This class removes administrative responsibilty from the Participant class. 
+		
+	
       
       		\begin{figure}[H]
                     \centering \includegraphics[height=0.85\textheight]{UMM-Diagrams/UMM-ActivityDiagram}
