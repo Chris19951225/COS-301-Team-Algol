@@ -241,6 +241,9 @@ A user should also be able to send a notification. The notification page should 
 			\caption{User Management Model Class Diagram}
 			\label{fig:User_class}
 	\end{figure}
+	
+		The above diagram depicts a class diagram of the User Management Model. A The Participant class is a abstract class which defines the common attributes and methods associated with the two main personnel who will interact with NavUp, namely Users and Administrators, which are the concrete implementations of Participant.\\\\
+		The only difference between the User and Administrators is the value stored in their respective isAdmin fields when initiated. Admin uses will also be allowed to managed the venues and activity models. In terms Guest, the third and final type of Participant, no data is stored with regards to guest User but is identified in the diagram to indicate a Guest user's interaction within the User Management model\\\\
       
       		\begin{figure}[H]
                     \centering \includegraphics[height=0.85\textheight]{UMM-Diagrams/UMM-ActivityDiagram}
